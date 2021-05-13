@@ -35,7 +35,7 @@ def make_video(params_file):
     sample_list = get_MiDaS_samples(params, params['specific'])
     normal_canvas, all_canvas = None, None
 
-    device = "cpu"
+    device = "cuda"
 
     depth = None
     try:

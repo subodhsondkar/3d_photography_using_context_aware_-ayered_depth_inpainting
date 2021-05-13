@@ -831,7 +831,7 @@ def clean_far_edge(mask_edge, mask_edge_with_id, context_edge, mask, info_on_pix
 
 def get_MiDaS_samples(params, specific=None, aft_certain=None):
     image_folder = params['src_dir']
-    depth_folder = params['outputs_dir']
+    depth_folder = params['depth_folder']
     lines = [os.path.splitext(os.path.basename(xx))[0] for xx in glob.glob(os.path.join(image_folder, '*' + params['img_format']))]
     samples = []
     generic_pose = np.eye(4)

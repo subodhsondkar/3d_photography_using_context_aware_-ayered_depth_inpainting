@@ -1851,7 +1851,8 @@ def write_ply(name,
     plt.imshow(edge_canvas, cmap="gray")
     plt.title("Edge Canvas")
     plt.show()
-    MiDaS_utils.write_depth(os.path.join(params['outputs_dir'], name, "edge_canvas"), edge_canvas, bits=2)
+    print(name + "_edge_canvas")
+    MiDaS_utils.write_depth(os.path.join(params['depth_folder'], name + "_edge_canvas"), edge_canvas, bits=2)
     input_mesh, info_on_pix, specific_edge_nodes, new_edge_ccs, connect_points_ccs, image = DL_inpaint_edge(input_mesh,
                                                                                                             info_on_pix,
                                                                                                             params,
